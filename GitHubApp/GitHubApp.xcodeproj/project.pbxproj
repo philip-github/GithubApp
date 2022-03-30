@@ -21,6 +21,7 @@
 		C15284DE27F3E318006110BD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284DD27F3E318006110BD /* ViewModel.swift */; };
 		C15284E027F3E324006110BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284DF27F3E324006110BD /* User.swift */; };
 		C15284E327F3E60F006110BD /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E227F3E60F006110BD /* URLs.swift */; };
+		C15284E527F3E9A1006110BD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E427F3E9A1006110BD /* Secret.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		C15284DD27F3E318006110BD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C15284DF27F3E324006110BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C15284E227F3E60F006110BD /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		C15284E427F3E9A1006110BD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +111,13 @@
 		C15284A427F3D7CD006110BD /* GitHubApp */ = {
 			isa = PBXGroup;
 			children = (
+				C15284A527F3D7CD006110BD /* AppDelegate.swift */,
+				C15284A727F3D7CD006110BD /* SceneDelegate.swift */,
+				C15284E627F3EC7E006110BD /* ViewControllers */,
 				C15284E127F3E5F4006110BD /* Constants */,
 				C15284DC27F3E2FC006110BD /* ViewModels */,
 				C15284DB27F3E2F6006110BD /* Models */,
 				C15284D827F3E2B8006110BD /* Networking */,
-				C15284A527F3D7CD006110BD /* AppDelegate.swift */,
-				C15284A727F3D7CD006110BD /* SceneDelegate.swift */,
-				C15284A927F3D7CD006110BD /* ViewController.swift */,
 				C15284AB27F3D7CD006110BD /* Main.storyboard */,
 				C15284B127F3D7D3006110BD /* Assets.xcassets */,
 				C15284B327F3D7D3006110BD /* LaunchScreen.storyboard */,
@@ -170,8 +172,17 @@
 			isa = PBXGroup;
 			children = (
 				C15284E227F3E60F006110BD /* URLs.swift */,
+				C15284E427F3E9A1006110BD /* Secret.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		C15284E627F3EC7E006110BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C15284A927F3D7CD006110BD /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				C15284E327F3E60F006110BD /* URLs.swift in Sources */,
 				C15284DE27F3E318006110BD /* ViewModel.swift in Sources */,
 				C15284A827F3D7CD006110BD /* SceneDelegate.swift in Sources */,
+				C15284E527F3E9A1006110BD /* Secret.swift in Sources */,
 				C15284E027F3E324006110BD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

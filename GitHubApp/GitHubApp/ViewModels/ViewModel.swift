@@ -24,4 +24,16 @@ class ViewModel {
             throw error
         }
     }
+    
+    func getUserRepos(url: String) async throws -> [UserRepos] {
+        guard let url = URL(string: url) else { throw NetWorkError.URLFromStringError }
+        do{
+            let data = try await APIManager.shared.fetchUserRepos(url: url)
+            let reposJson = try JSONDecoder().decode([UserRepos].self, from: data)
+            return reposJson
+        }catch{
+            print("Error [  ] ViewModel.getUserRepos \(error.localizedDescription)")
+            throw error
+        }
+    }
 }

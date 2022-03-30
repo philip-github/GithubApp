@@ -14,3 +14,12 @@ struct User: Codable {
         case username = "login"
     }
 }
+
+
+struct UserRepos: Codable {
+    var repoUrl: String
+    
+    enum CodingKeys: String, CodingKey{
+        case repoUrl = "archive_url"
+    }
+}

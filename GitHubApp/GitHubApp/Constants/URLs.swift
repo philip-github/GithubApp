@@ -9,4 +9,11 @@ import Foundation
 
 enum NetworkURL: String {
     case UserURL = "https://api.github.com/users/philip-github"
+    case UserRepos = "https://api.github.com/users/philip-github/repos"
+}
+
+
+enum EndPoints: String {
+    case myUserName = "philip-github/"
+    case repos = "repos/"
 }

@@ -20,4 +20,15 @@ class APIManager {
         }
         
     }
+    
+    func fetchUserRepos(url: URL) async throws -> Data {
+        let request = URLRequest(url: url)
+        do{
+            let (dataTask, _) = try await URLSession.shared.data(for: request)
+            return dataTask
+        }catch{
+            print("Error [  ] APIManager.fetchUserRepos \(error.localizedDescription)")
+            throw error
+        }
+    }
 }
