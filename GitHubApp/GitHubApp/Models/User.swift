@@ -7,19 +7,12 @@
 
 import Foundation
 
-struct User: Codable {
-    var username: String
+class User: Codable {
+    let username: String
+    let repos: String
     
     enum CodingKeys: String, CodingKey{
         case username = "login"
-    }
-}
-
-
-struct UserRepos: Codable {
-    var repoUrl: String
-    
-    enum CodingKeys: String, CodingKey{
-        case repoUrl = "archive_url"
+        case repos = "repos_url"
     }
 }

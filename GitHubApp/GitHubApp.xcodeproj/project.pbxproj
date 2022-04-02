@@ -18,10 +18,13 @@
 		C15284CA27F3D7D3006110BD /* GitHubAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284C927F3D7D3006110BD /* GitHubAppUITests.swift */; };
 		C15284CC27F3D7D3006110BD /* GitHubAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284CB27F3D7D3006110BD /* GitHubAppUITestsLaunchTests.swift */; };
 		C15284DA27F3E2CA006110BD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284D927F3E2CA006110BD /* APIManager.swift */; };
-		C15284DE27F3E318006110BD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284DD27F3E318006110BD /* ViewModel.swift */; };
+		C15284DE27F3E318006110BD /* GHViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284DD27F3E318006110BD /* GHViewModel.swift */; };
 		C15284E027F3E324006110BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284DF27F3E324006110BD /* User.swift */; };
 		C15284E327F3E60F006110BD /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E227F3E60F006110BD /* URLs.swift */; };
 		C15284E527F3E9A1006110BD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E427F3E9A1006110BD /* Secret.swift */; };
+		C15284EA27F50807006110BD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E927F50807006110BD /* CustomTableViewCell.swift */; };
+		C185AC3527F67C400030BDB6 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3427F67C400030BDB6 /* UserRepos.swift */; };
+		C185AC3727F67C560030BDB6 /* UserRepoCommits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3627F67C560030BDB6 /* UserRepoCommits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +60,13 @@
 		C15284C927F3D7D3006110BD /* GitHubAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppUITests.swift; sourceTree = "<group>"; };
 		C15284CB27F3D7D3006110BD /* GitHubAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C15284D927F3E2CA006110BD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		C15284DD27F3E318006110BD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C15284DD27F3E318006110BD /* GHViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHViewModel.swift; sourceTree = "<group>"; };
 		C15284DF27F3E324006110BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C15284E227F3E60F006110BD /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		C15284E427F3E9A1006110BD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		C15284E927F50807006110BD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C185AC3427F67C400030BDB6 /* UserRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
+		C185AC3627F67C560030BDB6 /* UserRepoCommits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoCommits.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 			children = (
 				C15284A527F3D7CD006110BD /* AppDelegate.swift */,
 				C15284A727F3D7CD006110BD /* SceneDelegate.swift */,
+				C15284E827F5079A006110BD /* CustomViews */,
 				C15284E627F3EC7E006110BD /* ViewControllers */,
 				C15284E127F3E5F4006110BD /* Constants */,
 				C15284DC27F3E2FC006110BD /* ViewModels */,
@@ -156,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				C15284DF27F3E324006110BD /* User.swift */,
+				C185AC3427F67C400030BDB6 /* UserRepos.swift */,
+				C185AC3627F67C560030BDB6 /* UserRepoCommits.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,7 +172,7 @@
 		C15284DC27F3E2FC006110BD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C15284DD27F3E318006110BD /* ViewModel.swift */,
+				C15284DD27F3E318006110BD /* GHViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				C15284E227F3E60F006110BD /* URLs.swift */,
-				C15284E427F3E9A1006110BD /* Secret.swift */,
+				C185AC3A27F7EA090030BDB6 /* Secret */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -183,6 +192,38 @@
 				C15284A927F3D7CD006110BD /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C15284E827F5079A006110BD /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C185AC3927F7E84F0030BDB6 /* ErrorPresenter */,
+				C185AC3827F7E8320030BDB6 /* TableView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		C185AC3827F7E8320030BDB6 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				C15284E927F50807006110BD /* CustomTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		C185AC3927F7E84F0030BDB6 /* ErrorPresenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ErrorPresenter;
+			sourceTree = "<group>";
+		};
+		C185AC3A27F7EA090030BDB6 /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				C15284E427F3E9A1006110BD /* Secret.swift */,
+			);
+			path = Secret;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +362,11 @@
 				C15284DA27F3E2CA006110BD /* APIManager.swift in Sources */,
 				C15284B027F3D7CD006110BD /* GitHubApp.xcdatamodeld in Sources */,
 				C15284E327F3E60F006110BD /* URLs.swift in Sources */,
-				C15284DE27F3E318006110BD /* ViewModel.swift in Sources */,
+				C15284DE27F3E318006110BD /* GHViewModel.swift in Sources */,
+				C185AC3527F67C400030BDB6 /* UserRepos.swift in Sources */,
+				C15284EA27F50807006110BD /* CustomTableViewCell.swift in Sources */,
 				C15284A827F3D7CD006110BD /* SceneDelegate.swift in Sources */,
+				C185AC3727F67C560030BDB6 /* UserRepoCommits.swift in Sources */,
 				C15284E527F3E9A1006110BD /* Secret.swift in Sources */,
 				C15284E027F3E324006110BD /* User.swift in Sources */,
 			);

@@ -4,31 +4,39 @@
 //
 //  Created by Philip Twal on 3/29/22.
 //
-
 import Foundation
+
+protocol URLSessionProtocol {
+    func getData(for urlrequest: URLRequest) async throws -> Data
+}
+
+extension URLSession: URLSessionProtocol {
+    func getData(for urlrequest: URLRequest) async throws -> Data {
+        let (task, _) = try await URLSession.shared.data(for: urlrequest)
+        return task
+    }
+}
+
 class APIManager {
     
     static let shared  = APIManager()
     
-    func fetchUser(url: URL) async throws -> Data {
-        let request = URLRequest(url: url)
-        do{
-            let (dataTask, _) = try await URLSession.shared.data(for: request)
-            return dataTask
-        }catch{
-            throw error
-        }
-        
-    }
+    let session: URLSessionProtocol
     
-    func fetchUserRepos(url: URL) async throws -> Data {
-        let request = URLRequest(url: url)
+    init(session: URLSessionProtocol = URLSession() ) {
+        self.session = session
+    }
+   
+    func getData(url: URL) async throws -> Data {
+        var request = URLRequest(url: url)
+        request.addValue("token: \(Tokens.AuthToken.rawValue)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/vnd.github.v3+json", forHTTPHeaderField: "accept")
         do{
-            let (dataTask, _) = try await URLSession.shared.data(for: request)
+            let dataTask = try await session.getData(for: request)
             return dataTask
         }catch{
-            print("Error [  ] APIManager.fetchUserRepos \(error.localizedDescription)")
-            throw error
+            print("Error [      ] APIManager.getData \(error.localizedDescription)")
+            throw NetworkError.DataTaskError
         }
     }
 }

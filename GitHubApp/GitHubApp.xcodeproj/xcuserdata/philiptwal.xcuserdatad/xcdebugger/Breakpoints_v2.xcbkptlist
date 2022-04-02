@@ -3,4 +3,197 @@
    uuid = "A07CBE75-B1CA-4871-8A77-32381B1FEA59"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14DADC2A-3DCD-4445-A564-26309414B8F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubApp/ViewModels/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "loadUserRepos(url:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "14DADC2A-3DCD-4445-A564-26309414B8F9 - 52b5ae825bdbf467"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for GitHubApp.ViewModel.loadUserRepos(url: Swift.String) async throws -&gt; Swift.Array&lt;GitHubApp.UserCommits&gt;"
+                  moduleName = "GitHubApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/philiptwal/Desktop/GitHub/GitHubApp/GitHubApp/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "1282">
+               </Location>
+               <Location
+                  uuid = "14DADC2A-3DCD-4445-A564-26309414B8F9 - 36d2fa3670ef7666"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for GitHubApp.ViewModel.loadUserRepos(url: Swift.String) async throws -&gt; Swift.Array&lt;GitHubApp.UserCommits&gt;"
+                  moduleName = "GitHubApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/philiptwal/Desktop/GitHub/GitHubApp/GitHubApp/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35E4E7BE-C9C2-4CE6-9F9A-0179D4B768A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubApp/ViewModels/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "loadUserRepos(url:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "35E4E7BE-C9C2-4CE6-9F9A-0179D4B768A1 - 52b5ae825bdbf425"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for GitHubApp.ViewModel.loadUserRepos(url: Swift.String) async throws -&gt; Swift.Array&lt;GitHubApp.UserCommits&gt;"
+                  moduleName = "GitHubApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/philiptwal/Desktop/GitHub/GitHubApp/GitHubApp/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "1877">
+               </Location>
+               <Location
+                  uuid = "35E4E7BE-C9C2-4CE6-9F9A-0179D4B768A1 - 36d2fa3670ef7624"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for GitHubApp.ViewModel.loadUserRepos(url: Swift.String) async throws -&gt; Swift.Array&lt;GitHubApp.UserCommits&gt;"
+                  moduleName = "GitHubApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/philiptwal/Desktop/GitHub/GitHubApp/GitHubApp/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "1647">
+               </Location>
+               <Location
+                  uuid = "35E4E7BE-C9C2-4CE6-9F9A-0179D4B768A1 - 9acb366a6902f02b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) await resume partial function for GitHubApp.ViewModel.loadUserRepos(url: Swift.String) async throws -&gt; Swift.Array&lt;GitHubApp.UserCommits&gt;"
+                  moduleName = "GitHubApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/philiptwal/Desktop/GitHub/GitHubApp/GitHubApp/ViewModels/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C764D52-2338-4112-87AD-03E72A0F9C5D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubApp/ViewModels/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "getRepoCommits(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB83395C-C3CF-4EC3-8FF4-6205FFBF1997"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubApp/ViewControllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "356F5D0A-54DD-46B2-99B7-0D7DDD1D8C31"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubApp/ViewControllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10532538-3A2A-4F87-9741-DA30C5B6269C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubApp/ViewControllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2624D0ED-C722-44E6-8385-CB1B00B49426"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubApp/ViewControllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
