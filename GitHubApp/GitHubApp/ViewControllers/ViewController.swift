@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     }()
     
     var userCommits: [[UserCommits]]? = []
+    
+    // pageNumber will controll of how many users want to fetch to get their data
     var pageNumber = 3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -36,7 +39,6 @@ class ViewController: UIViewController {
     }
     
     func setupNavigationBar(){
-        view.backgroundColor = .darkGray
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "GitHub"
     }
@@ -53,8 +55,10 @@ class ViewController: UIViewController {
                     Loader.shared.stopLoading()
                 }
             }catch{
-                Loader.shared.stopLoading()
-                ErrorPresenter.showError(viewController: self)
+                DispatchQueue.main.async {
+                    Loader.shared.stopLoading()
+                    ErrorPresenter.showError(viewController: self)
+                }
             }
         }
     }
