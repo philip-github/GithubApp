@@ -25,6 +25,7 @@
 		C15284EA27F50807006110BD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E927F50807006110BD /* CustomTableViewCell.swift */; };
 		C185AC3527F67C400030BDB6 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3427F67C400030BDB6 /* UserRepos.swift */; };
 		C185AC3727F67C560030BDB6 /* UserRepoCommits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3627F67C560030BDB6 /* UserRepoCommits.swift */; };
+		C185AC3C27F907BB0030BDB6 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3B27F907BB0030BDB6 /* MockSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C15284E927F50807006110BD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C185AC3427F67C400030BDB6 /* UserRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		C185AC3627F67C560030BDB6 /* UserRepoCommits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoCommits.swift; sourceTree = "<group>"; };
+		C185AC3B27F907BB0030BDB6 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C15284BF27F3D7D3006110BD /* GitHubAppTests.swift */,
+				C185AC3B27F907BB0030BDB6 /* MockSession.swift */,
 			);
 			path = GitHubAppTests;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C185AC3C27F907BB0030BDB6 /* MockSession.swift in Sources */,
 				C15284C027F3D7D3006110BD /* GitHubAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

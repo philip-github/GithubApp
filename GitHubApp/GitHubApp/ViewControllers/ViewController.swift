@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }()
     
     var userCommits: [[UserCommits]]? = []
-    var pageNumber = 3
+    var pageNumber = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
