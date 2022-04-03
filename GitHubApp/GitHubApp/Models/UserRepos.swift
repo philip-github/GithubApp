@@ -8,7 +8,7 @@
 import Foundation
 
 
-class UserRepos: Codable {
+struct UserRepos: Codable {
     let name: String
     let commits: String
     var owner: Owner?
@@ -20,7 +20,7 @@ class UserRepos: Codable {
     }
 }
 
-class Owner: Codable {
+struct Owner: Codable {
     let name: String
     
     enum CodingKeys: String, CodingKey{

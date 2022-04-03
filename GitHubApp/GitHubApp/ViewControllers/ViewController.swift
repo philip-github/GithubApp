@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         title = "GitHub"
     }
     
+    
     func loadRepos(numberOfPages: Int){
         Task.init(priority: .background) {
             let userCommitstask = try await GHViewModel.shared.loadUserRepos(url: "\(NetworkURL.Users.rawValue)\(EndPoints.per_page.rawValue)\(numberOfPages)")

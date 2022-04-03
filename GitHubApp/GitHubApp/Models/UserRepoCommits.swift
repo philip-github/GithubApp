@@ -7,17 +7,17 @@
 
 import Foundation
 
-class UserCommits: Codable {
+struct UserCommits: Codable {
     let commit: Commit?
 }
 
-class Commit: Codable {
+struct Commit: Codable {
     var message: String
     var author : Author
     var tree: Tree
 }
 
-class Author: Codable {
+struct Author: Codable {
     var name: String
     
     enum CodingKeys: String, CodingKey{
@@ -25,7 +25,7 @@ class Author: Codable {
     }
 }
 
-class Tree: Codable {
+struct Tree: Codable {
     var sha: String
     
     enum CodingKeys: String, CodingKey{
