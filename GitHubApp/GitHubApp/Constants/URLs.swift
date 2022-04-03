@@ -8,9 +8,6 @@ import Foundation
 
 enum NetworkURL: String {
     case Users = "https://api.github.com/users"
-//    case UserURL = "https://api.github.com/users/philip-github"
-//    case UserRepos = "https://api.github.com/users/philip-github/repos"
-//    case repoCommits = "https://api.github.com/repos/philip-github/GithubApp/commits/master?per_page=30"
 }
 
 enum EndPoints: String {
