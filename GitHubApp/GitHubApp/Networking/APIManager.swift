@@ -30,7 +30,6 @@ class APIManager {
     func getData(url: URL) async throws -> Data {
         var request = URLRequest(url: url)
         request.addValue("token: \(Tokens.AuthToken.rawValue)", forHTTPHeaderField: "Authorization")
-        request.addValue("application/vnd.github.v3+json", forHTTPHeaderField: "accept")
         do{
             let dataTask = try await session.getData(for: request)
             return dataTask
