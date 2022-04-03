@@ -11,12 +11,13 @@ class ViewController: UIViewController {
 
     let tableView: UITableView = {
        let tableView = UITableView()
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        let nib = UINib(nibName: CustomXIBTableViewCell.identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: CustomXIBTableViewCell.identifier)
         return tableView
     }()
     
     var userCommits: [[UserCommits]]? = []
-    var pageNumber = 1
+    var pageNumber = 3
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -42,11 +43,18 @@ class ViewController: UIViewController {
     
     
     func loadRepos(numberOfPages: Int){
+        Loader.shared.showLoading(viewController: self)
         Task.init(priority: .background) {
-            let userCommitstask = try await GHViewModel.shared.loadUserRepos(url: "\(NetworkURL.Users.rawValue)\(EndPoints.per_page.rawValue)\(numberOfPages)")
-            self.userCommits?.append(userCommitstask)
-            DispatchQueue.main.async { [weak self] in
-                self?.tableView.reloadData()
+            do{
+                let userCommitstask = try await GHViewModel.shared.loadUserRepos(url: "\(NetworkURL.Users.rawValue)\(EndPoints.per_page.rawValue)\(numberOfPages)")
+                self.userCommits?.append(userCommitstask)
+                DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+                    Loader.shared.stopLoading()
+                }
+            }catch{
+                Loader.shared.stopLoading()
+                ErrorPresenter.showError(viewController: self)
             }
         }
     }
@@ -60,14 +68,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return userCommits?.reduce([], +).count ?? 0
     }
     
-    func  numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 130
     }
-    
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let transform = CATransform3DTranslate(CATransform3DIdentity, 0, 50, 0)
@@ -80,9 +83,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier) as? CustomTableViewCell else { return CustomTableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomXIBTableViewCell.identifier) as? CustomXIBTableViewCell else { return CustomXIBTableViewCell() }
         let flatData = userCommits?.reduce([], +)
-        guard let data = flatData?[indexPath.row] else { return CustomTableViewCell() }
+        guard let data = flatData?[indexPath.row] else { return CustomXIBTableViewCell() }
         cell.authorLabel.text = "Author: \(String(describing: data.commit?.author.name ?? "No Author"))"
         cell.messageLabel.text = "Message: \(String(describing: data.commit?.message ?? "No Message"))"
         cell.shaLabel.text = "SHA: \(String(describing: data.commit?.tree.sha ?? "No SHA"))"

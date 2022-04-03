@@ -22,10 +22,13 @@
 		C15284E027F3E324006110BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284DF27F3E324006110BD /* User.swift */; };
 		C15284E327F3E60F006110BD /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E227F3E60F006110BD /* URLs.swift */; };
 		C15284E527F3E9A1006110BD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E427F3E9A1006110BD /* Secret.swift */; };
-		C15284EA27F50807006110BD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15284E927F50807006110BD /* CustomTableViewCell.swift */; };
 		C185AC3527F67C400030BDB6 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3427F67C400030BDB6 /* UserRepos.swift */; };
 		C185AC3727F67C560030BDB6 /* UserRepoCommits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3627F67C560030BDB6 /* UserRepoCommits.swift */; };
 		C185AC3C27F907BB0030BDB6 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3B27F907BB0030BDB6 /* MockSession.swift */; };
+		C185AC4127F9DAFC0030BDB6 /* CustomXIBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC3F27F9DAFC0030BDB6 /* CustomXIBTableViewCell.swift */; };
+		C185AC4227F9DAFC0030BDB6 /* CustomXIBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C185AC4027F9DAFC0030BDB6 /* CustomXIBTableViewCell.xib */; };
+		C185AC4527F9E1CB0030BDB6 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC4427F9E1CB0030BDB6 /* ErrorPresenter.swift */; };
+		C185AC4927F9E6DD0030BDB6 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185AC4827F9E6DD0030BDB6 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +68,13 @@
 		C15284DF27F3E324006110BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C15284E227F3E60F006110BD /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		C15284E427F3E9A1006110BD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
-		C15284E927F50807006110BD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C185AC3427F67C400030BDB6 /* UserRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		C185AC3627F67C560030BDB6 /* UserRepoCommits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoCommits.swift; sourceTree = "<group>"; };
 		C185AC3B27F907BB0030BDB6 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
+		C185AC3F27F9DAFC0030BDB6 /* CustomXIBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomXIBTableViewCell.swift; sourceTree = "<group>"; };
+		C185AC4027F9DAFC0030BDB6 /* CustomXIBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomXIBTableViewCell.xib; sourceTree = "<group>"; };
+		C185AC4427F9E1CB0030BDB6 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
+		C185AC4827F9E6DD0030BDB6 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 		C15284E827F5079A006110BD /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C185AC4727F9E6CF0030BDB6 /* Loader */,
 				C185AC3927F7E84F0030BDB6 /* ErrorPresenter */,
 				C185AC3827F7E8320030BDB6 /* TableView */,
 			);
@@ -209,7 +216,7 @@
 		C185AC3827F7E8320030BDB6 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				C15284E927F50807006110BD /* CustomTableViewCell.swift */,
+				C185AC4327F9DEAF0030BDB6 /* CustomXIBCell */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 		C185AC3927F7E84F0030BDB6 /* ErrorPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				C185AC4427F9E1CB0030BDB6 /* ErrorPresenter.swift */,
 			);
 			path = ErrorPresenter;
 			sourceTree = "<group>";
@@ -227,6 +235,23 @@
 				C15284E427F3E9A1006110BD /* Secret.swift */,
 			);
 			path = Secret;
+			sourceTree = "<group>";
+		};
+		C185AC4327F9DEAF0030BDB6 /* CustomXIBCell */ = {
+			isa = PBXGroup;
+			children = (
+				C185AC4027F9DAFC0030BDB6 /* CustomXIBTableViewCell.xib */,
+				C185AC3F27F9DAFC0030BDB6 /* CustomXIBTableViewCell.swift */,
+			);
+			path = CustomXIBCell;
+			sourceTree = "<group>";
+		};
+		C185AC4727F9E6CF0030BDB6 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				C185AC4827F9E6DD0030BDB6 /* Loader.swift */,
+			);
+			path = Loader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C185AC4227F9DAFC0030BDB6 /* CustomXIBTableViewCell.xib in Resources */,
 				C15284B527F3D7D3006110BD /* LaunchScreen.storyboard in Resources */,
 				C15284B227F3D7D3006110BD /* Assets.xcassets in Resources */,
 				C15284AD27F3D7CD006110BD /* Main.storyboard in Resources */,
@@ -361,16 +387,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15284AA27F3D7CD006110BD /* ViewController.swift in Sources */,
+				C185AC4127F9DAFC0030BDB6 /* CustomXIBTableViewCell.swift in Sources */,
+				C185AC4527F9E1CB0030BDB6 /* ErrorPresenter.swift in Sources */,
 				C15284A627F3D7CD006110BD /* AppDelegate.swift in Sources */,
 				C15284DA27F3E2CA006110BD /* APIManager.swift in Sources */,
 				C15284B027F3D7CD006110BD /* GitHubApp.xcdatamodeld in Sources */,
 				C15284E327F3E60F006110BD /* URLs.swift in Sources */,
 				C15284DE27F3E318006110BD /* GHViewModel.swift in Sources */,
 				C185AC3527F67C400030BDB6 /* UserRepos.swift in Sources */,
-				C15284EA27F50807006110BD /* CustomTableViewCell.swift in Sources */,
 				C15284A827F3D7CD006110BD /* SceneDelegate.swift in Sources */,
 				C185AC3727F67C560030BDB6 /* UserRepoCommits.swift in Sources */,
 				C15284E527F3E9A1006110BD /* Secret.swift in Sources */,
+				C185AC4927F9E6DD0030BDB6 /* Loader.swift in Sources */,
 				C15284E027F3E324006110BD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

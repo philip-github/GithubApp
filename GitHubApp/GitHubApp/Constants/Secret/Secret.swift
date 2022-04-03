@@ -8,5 +8,5 @@
 import Foundation
 
 enum Tokens: String {
-    case AuthToken = ""
+    case AuthToken = "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"
 }

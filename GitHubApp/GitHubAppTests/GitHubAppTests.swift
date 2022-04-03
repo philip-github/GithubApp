@@ -29,7 +29,7 @@ class GitHubAppTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         guard let url = URL(string: "https://api.github.com/users\(EndPoints.per_page.rawValue)\(1)") else { throw NetworkError.BadURL }
-        var request = URLRequest(url: url)
+        let request = URLRequest(url: url)
 //        request.addValue("token: \(Tokens.AuthToken.rawValue)", forHTTPHeaderField: "Authorization")
         if let testSession = apiHandler{
             let testTask = try await testSession.session.getData(for: request)
@@ -43,9 +43,7 @@ class GitHubAppTests: XCTestCase {
     func testPerformanceExample() async throws {
         // This is an example of a performance test case.
         self.measure {
-            Task.init(priority: .background) {
-                try await self.testAPICall()
-            }
+            
         }
     }
 
