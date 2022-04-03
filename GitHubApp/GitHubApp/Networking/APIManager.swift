@@ -23,7 +23,7 @@ class APIManager {
     
     let session: URLSessionProtocol
     
-    init(session: URLSessionProtocol = URLSession() ) {
+    init(session: URLSessionProtocol = URLSession.shared) {
         self.session = session
     }
    
