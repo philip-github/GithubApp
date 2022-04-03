@@ -17,6 +17,11 @@ enum NetworkError: Error {
 class GHViewModel {
     
     static let shared = GHViewModel()
+    let apiManager: APIManager
+    
+    private init(){
+        self.apiManager = APIManager()
+    }
     
     func getUsers(url: String) async throws -> [User] {
         guard let url = URL(string: url) else {
@@ -24,7 +29,7 @@ class GHViewModel {
             throw NetworkError.BadURL
         }
         do{
-            let data = try await APIManager.shared.getData(url: url)
+            let data = try await apiManager.getData(url: url)
             let user = try JSONDecoder().decode([User].self, from: data)
             return user
         }catch{
@@ -39,7 +44,7 @@ class GHViewModel {
             throw NetworkError.BadURL
         }
         do{
-            let data = try await APIManager.shared.getData(url: url)
+            let data = try await apiManager.getData(url: url)
             let reposJson = try JSONDecoder().decode([UserRepos].self, from: data)
             return reposJson
         }catch{
@@ -54,7 +59,7 @@ class GHViewModel {
             throw NetworkError.BadURL
         }
         do{
-            let data = try await APIManager.shared.getData(url: url)
+            let data = try await apiManager.getData(url: url)
             let commitsJson = try JSONDecoder().decode([UserCommits].self, from: data)
             return commitsJson
         }catch{

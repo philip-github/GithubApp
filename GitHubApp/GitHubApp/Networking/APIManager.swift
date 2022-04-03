@@ -19,8 +19,6 @@ extension URLSession: URLSessionProtocol {
 
 class APIManager {
     
-    static let shared  = APIManager()
-    
     let session: URLSessionProtocol
     
     init(session: URLSessionProtocol = URLSession.shared) {
