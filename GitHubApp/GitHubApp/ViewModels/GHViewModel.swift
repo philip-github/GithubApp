@@ -25,11 +25,6 @@ class GHViewModel {
         }
         do{
             let data = try await APIManager.shared.getData(url: url)
-            let jsonS = try JSONSerialization.jsonObject(with: data, options: [])
-            print(jsonS)
-            debugPrint()
-            debugPrint()
-            debugPrint()
             let user = try JSONDecoder().decode([User].self, from: data)
             return user
         }catch{
@@ -45,11 +40,6 @@ class GHViewModel {
         }
         do{
             let data = try await APIManager.shared.getData(url: url)
-            let jsonS = try JSONSerialization.jsonObject(with: data, options: [])
-            print(jsonS)
-            debugPrint()
-            debugPrint()
-            debugPrint()
             let reposJson = try JSONDecoder().decode([UserRepos].self, from: data)
             return reposJson
         }catch{
@@ -65,11 +55,6 @@ class GHViewModel {
         }
         do{
             let data = try await APIManager.shared.getData(url: url)
-            let jsonS = try JSONSerialization.jsonObject(with: data, options: [])
-            print(jsonS)
-            debugPrint()
-            debugPrint()
-            debugPrint()
             let commitsJson = try JSONDecoder().decode([UserCommits].self, from: data)
             return commitsJson
         }catch{
